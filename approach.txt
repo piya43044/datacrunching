@@ -1,0 +1,19 @@
+Approach of Data Crunching:
+
+1. Take a path of user_email_hash.1m.tsv file and create an object of BufferedReader as well as also create an object of ip_1m.tsv file.
+
+2. Now create an object of FileWriter class contain the path of new file and creating a new file.
+
+3. Now create an object of BufferedWriter class for write the data on new file.
+
+4. Run a loop untill user_email_hash.1m.tsv file is equal to null.
+
+	4.1 Now split the line of user_email_hash.1m.tsv file and store it into a string ans write on new file.
+	4.2 Now check the condition if(i==1) or not because we have to write the plaintext_password in first line of new file.
+	4.3 If i==1 is True, then create an object of BufferedReader class of plaintext file. Run the loop untill file end, during looping split the file and store in string and check email of user file is same as plaintext file.
+		4.3.a If it same the write the plaintext_password in new file and break the loop.
+		4.3.b If email is not same then the space of plaintext_password is blank in new file.
+	4.4 Now run another loop for reading the ip file.
+		4.4.a During looping, it split the line of ip file and store in a string and check id of user file is same as id of ip file. If it same then write the ip in new file and break the loop.
+
+5 Now we got a meesage "Successfully...." i.e program is successfully run and create the new file.
